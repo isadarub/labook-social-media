@@ -1,0 +1,59 @@
+### Test endpoint
+GET http://localhost:3003/ping
+
+
+#### ATENTION! To test by this document, please insert an updated token generate by login.
+### Signup
+POST http://localhost:3003/users/signup 
+Content-Type: application/json
+
+{
+    "name": "Person",
+    "email": "person@test.com",
+    "password": "abc123"
+}
+
+### Login
+POST http://localhost:3003/users/login
+Content-Type: application/json
+
+{
+    "email": "person@test.com",
+    "password": "abc123"
+}
+
+### Create Post
+POST http://localhost:3003/posts/create
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjUwMmM2ODQ3LWQ1NTktNDA2MC1hMDhkLThjZTJiN2UyOWFjYyIsInJvbGUiOiJOT1JNQUwiLCJpYXQiOjE2NjA0MzcwNDgsImV4cCI6MTY2MDUyMzQ0OH0.SwUFR_JV7pMNX_S6tfCNgn49BldFZZSBxl4rR2Hr9n4
+
+{
+    "content": "My first post"
+}
+
+### Get all posts
+GET http://localhost:3003/posts
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjUwMmM2ODQ3LWQ1NTktNDA2MC1hMDhkLThjZTJiN2UyOWFjYyIsInJvbGUiOiJOT1JNQUwiLCJpYXQiOjE2NjA0MzcwNDgsImV4cCI6MTY2MDUyMzQ0OH0.SwUFR_JV7pMNX_S6tfCNgn49BldFZZSBxl4rR2Hr9n4
+
+### Delete post
+DELETE http://localhost:3003/posts/0ff601b4-31e0-46c4-9465-d91c7087fda1
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjUwMmM2ODQ3LWQ1NTktNDA2MC1hMDhkLThjZTJiN2UyOWFjYyIsInJvbGUiOiJOT1JNQUwiLCJpYXQiOjE2NjA0MzcwNDgsImV4cCI6MTY2MDUyMzQ0OH0.SwUFR_JV7pMNX_S6tfCNgn49BldFZZSBxl4rR2Hr9n4
+
+### Like a post
+POST http://localhost:3003/posts/like/201
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjUwMmM2ODQ3LWQ1NTktNDA2MC1hMDhkLThjZTJiN2UyOWFjYyIsInJvbGUiOiJOT1JNQUwiLCJpYXQiOjE2NjA0MzcwNDgsImV4cCI6MTY2MDUyMzQ0OH0.SwUFR_JV7pMNX_S6tfCNgn49BldFZZSBxl4rR2Hr9n4
+
+
+### Dislike a post
+DELETE http://localhost:3003/posts/dislike/201
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjUwMmM2ODQ3LWQ1NTktNDA2MC1hMDhkLThjZTJiN2UyOWFjYyIsInJvbGUiOiJOT1JNQUwiLCJpYXQiOjE2NjA0MzcwNDgsImV4cCI6MTY2MDUyMzQ0OH0.SwUFR_JV7pMNX_S6tfCNgn49BldFZZSBxl4rR2Hr9n4
+
+
+### Update post
+PUT http://localhost:3003/posts/87cbc789-ec3b-4a11-a839-01f02d54984a
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjUwMmM2ODQ3LWQ1NTktNDA2MC1hMDhkLThjZTJiN2UyOWFjYyIsInJvbGUiOiJOT1JNQUwiLCJpYXQiOjE2NjA0MzcwNDgsImV4cCI6MTY2MDUyMzQ0OH0.SwUFR_JV7pMNX_S6tfCNgn49BldFZZSBxl4rR2Hr9n4
+Content-Type: application/json
+
+{
+    "content": "Updating my post"
+}
